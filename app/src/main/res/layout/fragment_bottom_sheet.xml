@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".practice.BottomSheetFragment">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order details"
+        android:textSize="24sp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium_numbers"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_heading">
+
+        <ImageView
+            android:id="@+id/iv_img1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/tv_img1_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Img1Name"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/iv_img1"/>
+        <TextView
+            android:id="@+id/tv_img1_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Img1Price"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/iv_img1"
+            android:layout_below="@id/tv_img1_title1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout1">
+
+        <ImageView
+            android:id="@+id/iv_img2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_img2_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Img2Name"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/iv_img2"/>
+        <TextView
+            android:id="@+id/tv_img2_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Img2Price"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/tv_img2_title1"
+            android:layout_toEndOf="@id/iv_img2"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
