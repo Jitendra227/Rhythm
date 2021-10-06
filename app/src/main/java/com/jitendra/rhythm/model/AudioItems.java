@@ -1,19 +1,15 @@
 package com.jitendra.rhythm.model;
 
+import android.net.Uri;
+
 import java.io.Serializable;
 
 public class AudioItems implements Serializable {
     String audioTitle;
     String audioArtist;
     String duration;
-    String audioUri;
+    Uri audioUri;
 
-    public AudioItems(String audioTitle, String audioArtist, String duration, String audioUri) {
-        this.audioTitle = audioTitle;
-        this.audioArtist = audioArtist;
-        this.duration = duration;
-        this.audioUri = audioUri;
-    }
 
     public String getAudioTitle() {
         return audioTitle;
@@ -39,11 +35,11 @@ public class AudioItems implements Serializable {
         this.duration = duration;
     }
 
-    public String getAudioUri() {
+    public Uri getAudioUri() {
         return audioUri;
     }
 
-    public void setAudioUri(String audioUri) {
+    public void setAudioUri(Uri audioUri) {
         this.audioUri = audioUri;
     }
 }

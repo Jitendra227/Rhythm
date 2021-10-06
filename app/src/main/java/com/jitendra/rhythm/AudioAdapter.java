@@ -14,14 +14,13 @@ import com.jitendra.rhythm.model.AudioItems;
 import java.util.ArrayList;
 
 public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.viewHolder> {
-    ArrayList<AudioItems> items;
     Context context;
-    private final OnItemClickListener listener;
+    ArrayList<AudioItems> items;
+    public OnItemClickListener onItemClickListener;
 
-    public AudioAdapter(ArrayList<AudioItems> items, Context context, OnItemClickListener listener) {
-        this.items = items;
+    public AudioAdapter(Context context,ArrayList<AudioItems> items) {
         this.context = context;
-        this.listener = listener;
+        this.items = items;
     }
 
     @NonNull
@@ -41,6 +40,9 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.viewHolder> 
         return items.size();
     }
 
+
+
+
     public class viewHolder extends RecyclerView.ViewHolder{
         private TextView title, artist;
 
@@ -52,7 +54,7 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.viewHolder> 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.onItemClick(getAdapterPosition(),v);
+                    onItemClickListener.onItemClick(getAdapterPosition(),v);
                 }
             });
         }
@@ -61,6 +63,13 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.viewHolder> 
             title.setText(audioItems.getAudioTitle());
             artist.setText(audioItems.getAudioArtist());
         }
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+    public interface OnItemClickListener {
+        void onItemClick(int pos, View v);
     }
 
 

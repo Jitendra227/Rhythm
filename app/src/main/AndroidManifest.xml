@@ -13,9 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Rhythm">
+        <activity android:name=".practice.seekbardesign"></activity>
         <activity
             android:name=".HomeScreenActivity"
-            android:label="@string/title_activity_main2"></activity>
+            android:label="@string/title_activity_main2" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/title_activity_login" />

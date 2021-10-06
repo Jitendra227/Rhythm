@@ -14,14 +14,6 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginBottom="80dp"/>
 
-    <Button
-        android:id="@+id/bottom_sheet_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="click for bottom sheet"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/recycler_view"/>
-
     <LinearLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
@@ -91,20 +83,20 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_skip_previous_btn"/>
+                android:src="@drawable/ic_new_previous_icon"/>
 
             <ImageView
                 android:id="@+id/pause_btn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_play_btn"/>
+                android:src="@drawable/ic_new_play_icon"/>
 
             <ImageView
                 android:id="@+id/next_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_skip_next_btn"/>
+                android:src="@drawable/ic_new_next_icon"/>
 
         </LinearLayout>
     </LinearLayout>
