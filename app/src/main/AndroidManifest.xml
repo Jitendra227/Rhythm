@@ -18,7 +18,7 @@
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_main2" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".Activities.LoginScreenActivity"
             android:label="@string/title_activity_login" />
         <activity android:name=".HomeScreen">
             <intent-filter>
@@ -27,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.RegisterScreenActivity" />
     </application>
 
 </manifest>
