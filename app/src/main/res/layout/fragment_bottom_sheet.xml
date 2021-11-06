@@ -27,7 +27,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:src="@drawable/ic_launcher_background"/>
+            android:src="@drawable/ic_music_background"/>
 
         <TextView
             android:id="@+id/tv_img1_title1"
@@ -63,7 +63,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/ic_music_background"
             android:layout_marginTop="10dp"/>
         <TextView
             android:id="@+id/tv_img2_title1"

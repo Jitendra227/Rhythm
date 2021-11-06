@@ -67,7 +67,7 @@ public class LoginScreenActivity extends AppCompatActivity {
         googe_sign_in_Img = findViewById(R.id.googel_sign_in);
         facebook_sign_in_Img = findViewById(R.id.facebook_sign_in);
 
-        configureGoogleClient();
+//        configureGoogleClient();
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,27 +134,27 @@ public class LoginScreenActivity extends AppCompatActivity {
         });
     }
 
-    private void configureGoogleClient() {
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build();
+//    private void configureGoogleClient() {
+//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+//                .requestIdToken(getString(R.string.default_web_client_id))
+//                .requestEmail()
+//                .build();
+//
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+//        mGoogleSignInClient.revokeAccess();
+//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+//        auth = FirebaseAuth.getInstance();
+//    }
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        mGoogleSignInClient.revokeAccess();
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        auth = FirebaseAuth.getInstance();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = auth.getCurrentUser();
-        if (currentUser != null) {
-            Log.d(TAG, "currently signed in as: "+ currentUser.getEmail());
-            Toast.makeText(this, "signed in", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        FirebaseUser currentUser = auth.getCurrentUser();
+//        if (currentUser != null) {
+//            Log.d(TAG, "currently signed in as: "+ currentUser.getEmail());
+//            Toast.makeText(this, "signed in", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
 
     private void signIn() {

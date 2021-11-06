@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:background="#011417"
     tools:context=".HomeScreen">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -83,20 +83,20 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_new_previous_icon"/>
+                android:src="@drawable/ic_previous_icon"/>
 
             <ImageView
                 android:id="@+id/pause_btn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_new_play_icon"/>
+                android:src="@drawable/play"/>
 
             <ImageView
                 android:id="@+id/next_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_new_next_icon"/>
+                android:src="@drawable/ic_next_icon"/>
 
         </LinearLayout>
     </LinearLayout>

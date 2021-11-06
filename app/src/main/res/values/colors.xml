@@ -11,4 +11,6 @@
     <color name="red">#D50000</color>
     <color name="pink">#C51162</color>
     <color name="yellow">#FFD600</color>
+    <color name="grey">#CC000000</color>
+    <color name="gradient">#040F23</color>
 </resources>

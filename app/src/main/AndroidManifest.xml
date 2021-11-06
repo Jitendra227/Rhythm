@@ -15,11 +15,10 @@
         android:theme="@style/Theme.Rhythm">
         <activity android:name=".practice.seekbardesign"></activity>
         <activity
-            android:name=".HomeScreenActivity"
-            android:label="@string/title_activity_main2" />
+            android:name=".HomeScreenActivity" />
         <activity
             android:name=".Activities.LoginScreenActivity"
-            android:label="@string/title_activity_login" />
+            />
         <activity android:name=".HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +27,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.RegisterScreenActivity" />
+        <activity android:name=".Activities.SplashScreen" />
+        <activity android:name=".Activities.WelcomeScreen" />
     </application>
 
 </manifest>

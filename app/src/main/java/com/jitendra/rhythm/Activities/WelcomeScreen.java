@@ -19,13 +19,13 @@ public class WelcomeScreen extends AppCompatActivity {
     private FirebaseUser firebaseUser;
     private Button joinNowBtn,signInBtn;
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        Log.d(TAG, "onStart: <---Last Logged in user checking--->>");
-        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        Log.d(TAG, "onStart: <---Last Logged in user checking--->>");
+//        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+//    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
