@@ -13,4 +13,5 @@
     <color name="yellow">#FFD600</color>
     <color name="grey">#CC000000</color>
     <color name="gradient">#040F23</color>
+    <color name="light_grey">#7D9377</color>
 </resources>

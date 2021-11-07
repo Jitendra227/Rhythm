@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#011417"
     tools:context=".HomeScreen">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/track_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:background="@drawable/top_bar_gradient"
+            android:layout_height="40dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_marginBottom="80dp"/>
+        android:layout_below="@id/track_appbar"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="100dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <LinearLayout
         android:id="@+id/bottom_bar"
@@ -28,10 +45,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-
-            android:textAlignment="center"
+            android:gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:textColor="@color/teal_200"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,10 +68,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginEnd="2dp"
                 android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 android:text="00:00"
-                android:textColor="@color/teal_200"/>
+                android:textColor="@color/teal_200" />
 
             <SeekBar
                 android:id="@+id/seekbar"
@@ -57,17 +79,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:theme="@style/SeekBar"/>
+                android:theme="@style/SeekBar" />
 
             <TextView
                 android:id="@+id/total_time_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginEnd="2dp"
                 android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 android:text="00:00"
-                android:textColor="@color/teal_200"/>
+                android:textColor="@color/teal_200" />
 
         </LinearLayout>
 
@@ -83,20 +105,20 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_previous_icon"/>
+                android:src="@drawable/ic_previous_icon" />
 
             <ImageView
                 android:id="@+id/pause_btn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/play"/>
+                android:src="@drawable/play" />
 
             <ImageView
                 android:id="@+id/next_btn"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_next_icon"/>
+                android:src="@drawable/ic_next_icon" />
 
         </LinearLayout>
     </LinearLayout>
