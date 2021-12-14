@@ -7,7 +7,7 @@
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout1"
+        android:id="@+id/track_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +30,9 @@
         android:background="@drawable/top_bar_gradient"
         android:contentDescription="@null"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        </ImageView>
 
         <TextView
             android:id="@+id/tv_tract_start_time"
@@ -66,7 +68,7 @@
             android:paddingStart="@dimen/medium_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_track_image" />
-        
+
         <TextView
             android:id="@+id/tv_track_title"
             android:layout_width="match_parent"
@@ -92,6 +94,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
+            android:paddingTop="10dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:text="Track Artist"
@@ -100,59 +103,69 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_track_title" />
 
-        <ImageView
-            android:id="@+id/iv_track_shuffle"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:padding="2dp"
-            android:src="@drawable/ic_baseline_shuffle_24"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/iv_track_previous"
-            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"/>
-
-        <ImageView
-            android:id="@+id/iv_track_previous"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:padding="2dp"
-            android:src="@drawable/ic_previous_icon"
-            app:layout_constraintStart_toEndOf="@id/iv_track_shuffle"
+        <LinearLayout
+            android:id="@+id/layout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
             app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
-            app:layout_constraintEnd_toStartOf="@id/iv_track_play_pause"/>
+            android:layout_below="@id/tv_track_artist"
+            android:layout_marginTop="20dp">
 
-        <ImageView
-            android:id="@+id/iv_track_play_pause"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:padding="2dp"
-            android:src="@drawable/play"
-            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
-            app:layout_constraintStart_toEndOf="@id/iv_track_previous"
-            app:layout_constraintEnd_toStartOf="@id/iv_track_next"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/iv_track_next"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:padding="2dp"
-            android:src="@drawable/ic_next_icon"
-            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
-            app:layout_constraintStart_toEndOf="@id/iv_track_play_pause"
-            app:layout_constraintEnd_toStartOf="@id/iv_track_repeat"/>
+                <Button
+                    android:id="@+id/play_button"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_play_icon"
+                    />
 
-        <ImageView
-            android:id="@+id/iv_track_repeat"
-            android:layout_width="0dp"
-            android:layout_height="36dp"
-            android:padding="2dp"
-            android:src="@drawable/ic_repeat"
-            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/iv_track_next"
-            />
-        
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@id/play_button"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ic_next_icon"
+                    />
+
+                <Button
+                    android:id="@+id/prev_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@id/play_button"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ic_previous_icon"
+                    />
+                <Button
+                    android:id="@+id/shuffle_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@id/prev_button"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/ic_baseline_shuffle_24"
+                    />
+
+                <Button
+                    android:id="@+id/loop_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@id/next_button"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/ic_baseline_loop_24"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/track_appbar"
+            android:id="@+id/activity_track_appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -160,6 +173,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/activity_track_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 app:navigationIcon="@drawable/ic_arrow_back"/>

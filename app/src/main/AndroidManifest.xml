@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <service android:name=".services.MediaPlayerService" />
         <activity android:name=".practice.seekbardesign"></activity>
         <activity
             android:name=".HomeScreenActivity" />
@@ -29,6 +32,7 @@
         <activity android:name=".Activities.RegisterScreenActivity" />
         <activity android:name=".Activities.SplashScreen" />
         <activity android:name=".Activities.WelcomeScreen" />
+        <activity android:name=".Activities.TrackActivity" />
     </application>
 
 </manifest>

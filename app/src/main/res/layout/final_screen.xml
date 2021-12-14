@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/layout4"
             android:layout_marginTop="25dp"
-            
+
             >
 
             <LinearLayout
@@ -159,6 +159,58 @@
 
             </LinearLayout>
         </RelativeLayout>
+        <!--
+                <ImageView
+            android:id="@+id/iv_track_shuffle"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_baseline_shuffle_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_track_previous"
+            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"/>
+
+        <ImageView
+            android:id="@+id/iv_track_previous"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_previous_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_track_shuffle"
+            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
+            app:layout_constraintEnd_toStartOf="@id/iv_track_play_pause"/>
+
+        <ImageView
+            android:id="@+id/iv_track_play_pause"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:padding="2dp"
+            android:src="@drawable/play"
+            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
+            app:layout_constraintStart_toEndOf="@id/iv_track_previous"
+            app:layout_constraintEnd_toStartOf="@id/iv_track_next"/>
+
+        <ImageView
+            android:id="@+id/iv_track_next"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_next_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
+            app:layout_constraintStart_toEndOf="@id/iv_track_play_pause"
+            app:layout_constraintEnd_toStartOf="@id/iv_track_repeat"/>
+
+        <ImageView
+            android:id="@+id/iv_track_repeat"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_repeat"
+            app:layout_constraintTop_toBottomOf="@id/tv_track_artist"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_track_next"
+            />
+        -->
 
     </RelativeLayout>
 </RelativeLayout>

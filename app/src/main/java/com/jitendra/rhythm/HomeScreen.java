@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -20,6 +21,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
@@ -44,10 +47,9 @@ import static com.jitendra.rhythm.R.id.current_time_txt;
 public class HomeScreen extends AppCompatActivity {
 
 
-
     ArrayList<AudioItems> audioItemsList;
     RecyclerView recyclerView;
-    ExoPlayer exoPlayer;
+
     TextView audioName, currentAudio, total;
     ImageView prev, next, pause;
     SeekBar seekBar;
@@ -215,9 +217,9 @@ public class HomeScreen extends AppCompatActivity {
     private String timerConvertor(long value) {
         String audioTime;
          int dur = (int) value;
-         int hrs = (dur / 360000);
-         int mns = (dur / 6000) % 60000;
-         int sec = dur % 60000 / 1000;
+         int hrs = (dur / 3600000);
+         int mns = (dur % 3600000) / 60000;
+         int sec = ((dur % 3600000) % 60000) / 1000;
 
          if (hrs > 1) {
              audioTime = String.format("%02d:%02d:%02d", hrs, mns, sec);
@@ -287,5 +289,13 @@ public class HomeScreen extends AppCompatActivity {
         if (mediaPlayer!=null){
             mediaPlayer.release();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater =  getMenuInflater();
+        menuInflater.inflate(R.menu.custom_setting_menu,menu);
+
+        return super.onCreateOptionsMenu(menu);
     }
 }

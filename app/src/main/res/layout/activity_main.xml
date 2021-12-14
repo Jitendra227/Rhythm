@@ -16,9 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/appbar_setting_menu"
             android:layout_width="match_parent"
             android:background="@drawable/top_bar_gradient"
+
             android:layout_height="40dp" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
 
